@@ -2,8 +2,8 @@
   "name": "labku",
   "version": "1.0.0",
   "private": true,
-  "engines": 
-  { "node": "20.x" 
+  "engines": {
+    "node": "26.x"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.0",
