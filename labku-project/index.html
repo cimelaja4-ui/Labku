@@ -1,7 +1,7 @@
 <!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LabKu</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fbf6ee;--ink:#2a1f17;--pt:#b5532b;--mut:#7a6a5c;--line:#eadfd1;--yel:#f4b740;--bad:#b3261e}
+:root{--bg:#eff3f0;--ink:#0b2f38;--pt:#0e4d5c;--mut:#5d7279;--line:#dbe4df;--yel:#f2c230;--bad:#b3261e}
 *{box-sizing:border-box}
 body{margin:0;font:15px/1.55 Figtree,system-ui,sans-serif;background:var(--bg);color:var(--ink)}
 h2,h3,.brand,.stat b,.hero h1{font-family:'Bricolage Grotesque',Figtree,system-ui,sans-serif}
@@ -9,7 +9,7 @@ button,input,select{font:inherit}
 h2{font-size:30px;margin:0 0 4px;line-height:1.15}h3{margin:0 0 14px;font-size:18px}.sub{color:var(--mut);margin:0 0 24px}
 svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:21px}
-.mark{width:36px;height:36px;border-radius:50%;background:var(--pt);color:#fbf6ee;display:grid;place-items:center}
+.mark{width:36px;height:36px;border-radius:10px;background:var(--yel);color:var(--ink);display:grid;place-items:center}
 .auth{display:grid;grid-template-columns:1.1fr 1fr;min-height:100vh}
 .hero{background:var(--ink);color:#fff;padding:44px 48px 0;display:flex;flex-direction:column;justify-content:space-between;gap:32px;overflow:hidden}
 .hero h1{font-size:clamp(36px,4.6vw,58px);line-height:1.03;margin:0 0 16px;max-width:10ch}
@@ -33,7 +33,7 @@ main{padding:32px 36px;max-width:1100px;width:100%}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:20px}
 .stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;color:var(--mut)}
 .stat b{display:block;font-size:42px;line-height:1.1;color:var(--ink)}
-.stat.hl{background:var(--pt);border-color:var(--pt);color:#f6dccb}.stat.hl b{color:#fff}
+.stat.hl{background:var(--pt);border-color:var(--pt);color:#bfe0e6}.stat.hl b{color:#fff}
 .cols{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
 .box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:20px;overflow-x:auto}
 .cr{display:grid;grid-template-columns:100px 1fr 54px;align-items:center;gap:10px;margin-bottom:10px;font-size:14px}.cr small{color:var(--mut);text-align:right}
@@ -57,13 +57,13 @@ dialog{border:0;border-radius:16px;padding:24px;width:min(420px,92vw)}dialog::ba
 :focus-visible{outline:2px solid var(--yel);outline-offset:2px}
 @media(max-width:860px){.auth,.app,.cols{grid-template-columns:1fr}.hero{padding:28px 24px 0}.tape{margin:0 -24px}.tags{display:none}
 nav{position:static;height:auto;flex-direction:row;overflow-x:auto;padding:12px;align-items:center}nav .brand{margin:0 8px 0 0}nav a{white-space:nowrap}.me{margin:0 0 0 auto}.me>div{display:none}main{padding:20px 16px}}
-.lg{min-height:100vh;background:linear-gradient(160deg,#3b2a1f,#1f1510);display:flex;flex-direction:column;padding:24px;color:#fff}
+.lg{min-height:100vh;background:linear-gradient(160deg,#4a5bf2,#3a46d4);display:flex;flex-direction:column;padding:24px;color:#fff}
 .lgm{flex:1;display:flex;align-items:center;justify-content:center;gap:clamp(8px,4vw,56px);flex-wrap:wrap}
 #ch{width:min(250px,56vw);height:auto;filter:drop-shadow(0 18px 24px rgba(0,0,30,.3))}
 .card{background:#fff;color:var(--ink);width:min(380px,100%);padding:32px 30px;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,40,.28)}
 .card h2{font-size:28px}
 .fi{position:relative;display:block;margin-top:6px}.fi svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--mut)}.fi input{padding-left:38px}
-.card .btn{background:#b5532b;width:100%;padding:12px}.card .btn:hover{background:#8f3f1e}.card .demo a{color:#b5532b}
+.card .btn{background:#4355f0;width:100%;padding:12px}.card .btn:hover{background:#2f3bc0}.card .demo a{color:#4355f0}
 .hn{transition:transform .35s cubic-bezier(.3,1.4,.5,1)}
 .shy .hn.l{transform:translate(26px,-128px)}.shy .hn.r{transform:translate(-26px,-128px)}
 .ey{transform-box:fill-box;transform-origin:center;animation:bl 5s infinite}
@@ -75,21 +75,43 @@ nav{position:static;height:auto;flex-direction:row;overflow-x:auto;padding:12px;
 .dnt{display:flex;align-items:center;gap:20px}.dnt svg{width:120px;height:120px;transform:rotate(-90deg);flex:none}.dnt circle{fill:none;stroke-width:14}.dnt .tr{stroke:#e3ebe7}.dnt .fg{stroke:var(--pt);stroke-linecap:round;transition:stroke-dasharray .8s}.dnt b{display:block;font:700 38px/1.1 'Bricolage Grotesque'}
 .cb{display:flex;gap:10px;align-items:flex-end;height:140px}.cb div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;height:100%}.cb i{width:100%;max-width:34px;background:var(--yel);border-radius:6px 6px 0 0}.cb em{font-style:normal;font-size:12px;font-weight:600}.cb small{color:var(--mut)}
 .lw{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}.tag.bad{background:#fbdcd8;color:var(--bad)}
-.dm{align-items:stretch}.dh{max-width:340px;align-self:center}.dh h1{font:700 46px/1.05 'Bricolage Grotesque';margin:0 0 12px}.dh p{color:#e8d5c4}.bk{color:#fff;text-decoration:underline}
+.dm{align-items:stretch}.dh{max-width:340px;align-self:center}.dh h1{font:700 46px/1.05 'Bricolage Grotesque';margin:0 0 12px}.dh p{color:#d6dcff}.bk{color:#fff;text-decoration:underline}
 .dc{width:min(300px,100%)}.dc h3{margin:10px 0}.dc dl{margin:0 0 12px;display:grid;grid-template-columns:auto 1fr;gap:4px 12px}.dc dt{color:var(--mut)}.dc dd{margin:0;font-weight:600}.dc ul{padding-left:18px;margin:0 0 16px;font-size:14px;color:var(--mut)}
-.lg2{min-height:100vh;background:linear-gradient(160deg,#3b2a1f,#1f1510);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
-.lc{width:min(420px,100%);background:#fff;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,40,.3);overflow:hidden;color:var(--ink)}
+.lg2{min-height:100vh;background:linear-gradient(160deg,#4a5bf2,#3a46d4);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
+.lc{width:min(420px,100%);background:#fff;border-radius:8px;box-shadow:0 24px 60px rgba(0,0,40,.3);overflow:hidden;color:var(--ink)}
 .lh{text-align:center;font:700 19px 'Bricolage Grotesque',Figtree,sans-serif;letter-spacing:.05em;padding:16px;border-bottom:1px solid var(--line)}
 .lb{padding:26px 28px 18px}.avw{display:flex;justify-content:center;margin-bottom:20px}
-#ch.av{width:120px;height:120px;border-radius:28px;background:#f4b740;filter:none;box-shadow:0 8px 20px rgba(11,47,56,.3)}
+#ch.av{width:150px;height:150px;border-radius:50%;background:#4d6470;filter:none;box-shadow:0 8px 20px rgba(11,47,56,.3)}
 .av.shy .hn.l{transform:translate(38px,-74px)}.av.shy .hn.r{transform:translate(-38px,-74px)}
 .lb label{font-weight:700;font-size:12.5px;letter-spacing:.06em;color:#3d5560}
 .lb input[type=text],.lb input[type=password]{border-radius:4px;padding:12px;margin-top:6px;font-weight:400;letter-spacing:0}
-.btn.gr{background:#b5532b;width:100%;padding:12px;border-radius:10px}.btn.gr:hover{background:#8f3f1e}
+.btn.gr{background:#0f9970;width:100%;padding:12px;border-radius:4px}.btn.gr:hover{background:#0b7a59}
 .lb .rm{display:flex;align-items:center;gap:8px;margin:14px 0 0;font-weight:500;letter-spacing:0;font-size:14px;cursor:pointer}.rm input{width:auto;padding:0;margin:0}
-.lf{background:#f1f1f1;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;font-size:14px}.lf a{color:#b5532b;text-decoration:underline;cursor:pointer}
+.lf{background:#f1f1f1;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;font-size:14px}.lf a{color:#2f3bc0;text-decoration:underline;cursor:pointer}
 .btn.rd{background:#e8382d;border-radius:4px;padding:8px 20px}.btn.rd:hover{background:#c22a20}
 .demo2{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center;font-size:13px}.demo2 a{color:#fff;text-decoration:underline;cursor:pointer}
+
+/* gaya baru: hijau hutan, navigasi atas, kartu lebih lapang */
+:root{--bg:#f4f7f2;--ink:#14291f;--pt:#1f6b4a;--mut:#5f6f66;--line:#dfe8e1;--yel:#e8b04a}
+.app{display:block;min-height:100vh}
+nav{position:sticky;top:0;height:auto;flex-direction:row;align-items:center;flex-wrap:wrap;gap:6px;padding:12px 28px;z-index:5}
+nav .brand{margin:0 24px 0 0;font-size:20px}
+nav a{padding:8px 12px}
+.me{margin:0 0 0 auto;padding:6px 10px}
+.mark{border-radius:8px;background:var(--yel);color:var(--ink)}
+main{margin:0 auto;padding:32px 28px}
+.stat{border:0;border-top:4px solid var(--yel);border-radius:12px;box-shadow:0 2px 0 rgba(20,41,31,.06)}
+.stat.hl{border-top-color:#fff}
+.box{border-radius:12px;box-shadow:0 2px 0 rgba(20,41,31,.05)}
+.lg,.lg2{background:linear-gradient(160deg,#14291f,#1f6b4a)}
+.lc{border-radius:14px}
+.lh{background:var(--pt);color:#fff;border-bottom:0}
+#ch.av{background:#dff0e6}
+.lf{background:#eef4ef}
+.btn.gr,.card .btn{background:#1f6b4a}
+.btn.gr:hover,.card .btn:hover{background:#14291f}
+.card .demo a,.lf a{color:#1f6b4a}
+.dh p{color:#cfe6d9}
 </style></head><body><div id="root"></div>
 <script>
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -113,7 +135,7 @@ const pages={
     const low=it.filter(i=>i.stock<=1).sort((a,b)=>a.stock-b.stock).slice(0,5),days=l=>Math.floor((new Date(ymd(new Date()))-new Date(l.loan_date))/864e5),dd=[...Array(7)].map((_,i)=>{const t=new Date(Date.now()-(6-i)*864e5),k=ymd(t);return{l:t.toLocaleDateString('id-ID',{weekday:'short'}),n:all.filter(x=>x.loan_date===k).length}}),m7=Math.max(1,...dd.map(x=>x.n)),pc=d.total?Math.round(d.tersedia/d.total*100):0,A=me.role==='ADMIN';
     it.forEach(i=>{const c=i.category||'Lainnya';cat[c]=cat[c]||{t:0,s:0};cat[c].t+=i.total;cat[c].s+=i.stock});
     const mx=Math.max(1,...Object.values(cat).map(c=>c.t));
-    $('#main').innerHTML=`<div class="hd"><div><h2>Selamat datang, ${esc(me.name)}</h2><p class="sub">${new Date().toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</p></div><div class="qa"><button class="btn" data-go="pinjam">Catat peminjaman</button><button class="btn s" data-go="kembali">Proses pengembalian</button>${A?'<button class="btn s" data-go="barang">Kelola barang</button>':''}</div></div><div class="stats"><div class="stat hl"><b>${d.tersedia}</b>Barang tersedia</div><div class="stat"><b>${d.total}</b>Total barang (unit)</div><div class="stat"><b>${d.dipinjam}</b>Sedang dipinjam</div><div class="stat"><b>${d.transaksi}</b>Total transaksi</div></div><div class="cols"><div class="box"><h3>Ketersediaan</h3><div class="dnt"><svg viewBox="0 0 120 120"><circle class="tr" cx="60" cy="60" r="48"/><circle class="fg" cx="60" cy="60" r="48" style="stroke-dasharray:${pc*3.016} 302"/></svg><div><b>${pc}%</b>unit siap dipinjam</div></div></div><div class="box"><h3>Peminjaman 7 hari terakhir</h3><div class="cb">${dd.map(x=>`<div><em>${x.n}</em><i style="height:${Math.max(4,x.n/m7*90)}px"></i><small>${x.l}</small></div>`).join('')}</div></div></div><div class="cols"><div class="box"><h3>Perlu dikembalikan</h3>${act.length?`<ul class="tl">${act.slice(0,5).map(l=>{const n=days(l);return `<li><b>${esc(l.borrower)}</b> ${l.qty} ${esc(l.item)}<small>${n} hari <span class="tag ${n>7?'wr':'ok'}">${n>7?'Terlambat':'Normal'}</span></small></li>`}).join('')}</ul>`:'<p>Semua barang sudah kembali.</p>'}</div><div class="box"><h3>Stok menipis</h3>${low.length?low.map(i=>`<div class="lw"><span>${esc(i.name)}</span><span class="tag ${i.stock?'wr':'bad'}">${i.stock?'Sisa '+i.stock:'Habis'}</span></div>`).join(''):'<p>Semua stok aman.</p>'}</div></div><div class="cols"><div class="box"><h3>Stok per kategori</h3>${Object.entries(cat).sort((a,b)=>b[1].t-a[1].t).map(([k,c])=>`<div class="cr"><span>${esc(k)}</span><div class="bar" style="width:${c.t/mx*100}%"><i style="width:${c.t?c.s/c.t*100:0}%"></i><i class="y" style="flex:1"></i></div><small>${c.s}/${c.t}</small></div>`).join('')}<p class="leg"><i></i>Tersedia <i class="y"></i>Dipinjam</p></div><div class="box"><h3>Aktivitas terbaru</h3>${d.recent.length?`<ul class="tl">${d.recent.map(l=>`<li class="${l.status==='SELESAI'?'dn':''}"><b>${esc(l.borrower)}</b> ${l.status==='SELESAI'?'mengembalikan':'meminjam'} ${l.qty} ${esc(l.item)}<small>${l.status==='SELESAI'?l.return_date:l.loan_date}</small></li>`).join('')}</ul>`:'<p>Belum ada transaksi.</p>'}</div></div>`;
+    $('#main').innerHTML=`<div class="hd"><div><h2>Ringkasan, ${esc(me.name)}</h2><p class="sub">${new Date().toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</p></div><div class="qa"><button class="btn" data-go="pinjam">Catat peminjaman</button><button class="btn s" data-go="kembali">Proses pengembalian</button>${A?'<button class="btn s" data-go="barang">Kelola barang</button>':''}</div></div><div class="stats"><div class="stat hl"><b>${d.tersedia}</b>Barang tersedia</div><div class="stat"><b>${d.total}</b>Total barang (unit)</div><div class="stat"><b>${d.dipinjam}</b>Sedang dipinjam</div><div class="stat"><b>${d.transaksi}</b>Total transaksi</div></div><div class="cols"><div class="box"><h3>Ketersediaan</h3><div class="dnt"><svg viewBox="0 0 120 120"><circle class="tr" cx="60" cy="60" r="48"/><circle class="fg" cx="60" cy="60" r="48" style="stroke-dasharray:${pc*3.016} 302"/></svg><div><b>${pc}%</b>unit siap dipinjam</div></div></div><div class="box"><h3>Peminjaman 7 hari terakhir</h3><div class="cb">${dd.map(x=>`<div><em>${x.n}</em><i style="height:${Math.max(4,x.n/m7*90)}px"></i><small>${x.l}</small></div>`).join('')}</div></div></div><div class="cols"><div class="box"><h3>Perlu dikembalikan</h3>${act.length?`<ul class="tl">${act.slice(0,5).map(l=>{const n=days(l);return `<li><b>${esc(l.borrower)}</b> ${l.qty} ${esc(l.item)}<small>${n} hari <span class="tag ${n>7?'wr':'ok'}">${n>7?'Terlambat':'Normal'}</span></small></li>`}).join('')}</ul>`:'<p>Semua barang sudah kembali.</p>'}</div><div class="box"><h3>Stok menipis</h3>${low.length?low.map(i=>`<div class="lw"><span>${esc(i.name)}</span><span class="tag ${i.stock?'wr':'bad'}">${i.stock?'Sisa '+i.stock:'Habis'}</span></div>`).join(''):'<p>Semua stok aman.</p>'}</div></div><div class="cols"><div class="box"><h3>Stok per kategori</h3>${Object.entries(cat).sort((a,b)=>b[1].t-a[1].t).map(([k,c])=>`<div class="cr"><span>${esc(k)}</span><div class="bar" style="width:${c.t/mx*100}%"><i style="width:${c.t?c.s/c.t*100:0}%"></i><i class="y" style="flex:1"></i></div><small>${c.s}/${c.t}</small></div>`).join('')}<p class="leg"><i></i>Tersedia <i class="y"></i>Dipinjam</p></div><div class="box"><h3>Aktivitas terbaru</h3>${d.recent.length?`<ul class="tl">${d.recent.map(l=>`<li class="${l.status==='SELESAI'?'dn':''}"><b>${esc(l.borrower)}</b> ${l.status==='SELESAI'?'mengembalikan':'meminjam'} ${l.qty} ${esc(l.item)}<small>${l.status==='SELESAI'?l.return_date:l.loan_date}</small></li>`).join('')}</ul>`:'<p>Belum ada transaksi.</p>'}</div></div>`;
     document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{page=b.dataset.go;render()});
     if(!matchMedia('(prefers-reduced-motion:reduce)').matches)document.querySelectorAll('.stat b').forEach(el=>{const n=+el.textContent;let t0=null;const f=t=>{t0=t0||t;const p=Math.min(1,(t-t0)/700);el.textContent=Math.round(n*p);if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)})},
   async barang(q=''){
@@ -146,7 +168,7 @@ const IC={dashboard:'M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z',barang:
 const ico=k=>`<svg viewBox="0 0 24 24"><path d="${IC[k]}"/></svg>`,brand=`<div class="brand"><span class="mark">${ico('barang')}</span>LabKu</div>`;
 function render(){
   if(!me&&location.hash==='#demo')return demo();
-  if(!me){$('#root').innerHTML=`<div class="lg2"><div class="lc"><div class="lh">MASUK KE LABKU</div><form class="lb" id="lf"><div class="avw"><svg id="ch" class="av" viewBox="0 0 200 200" aria-hidden="true"><path d="M78 30h44M88 30v50L52 140a14 14 0 0012 22h72a14 14 0 0012-22L112 80V30" fill="none" stroke="#2a1f17" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 130h80l12 32H48z" fill="#b5532b"/><circle cx="92" cy="146" r="6" fill="#fbf6ee"/><circle cx="116" cy="138" r="4" fill="#fbf6ee"/></svg></div><label>USERNAME<input name="u" type="text" placeholder="Masukkan username" required autofocus autocomplete="username"></label><label>PASSWORD<input name="p" type="password" placeholder="Masukkan password" required autocomplete="current-password"></label><div class="err" id="e"></div><button class="btn gr">Masuk</button><label class="rm"><input type="checkbox" id="rm">Ingat saya</label></form><div class="lf"><button type="button" class="btn rd" id="cn">Cancel</button><span>Lupa <a id="fp">password?</a></span></div></div><div class="demo2"><a data-d="admin">Isi akun Admin</a><a data-d="staff">Isi akun Staff</a><a href="#demo">Halaman akun demo</a></div></div>`;
+  if(!me){$('#root').innerHTML=`<div class="lg2"><div class="lc"><div class="lh">Masuk ke LabKu</div><form class="lb" id="lf"><div class="avw"><svg id="ch" class="av" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="92" fill="#1f6b4a"/><rect x="86" y="46" width="28" height="108" rx="8" fill="#e8b04a"/><rect x="46" y="86" width="108" height="28" rx="8" fill="#e8b04a"/></svg></div><label>USERNAME<input name="u" type="text" placeholder="Masukkan username" required autofocus autocomplete="username"></label><label>PASSWORD<input name="p" type="password" placeholder="Masukkan password" required autocomplete="current-password"></label><div class="err" id="e"></div><button class="btn gr">Masuk</button><label class="rm"><input type="checkbox" id="rm">Ingat saya</label></form><div class="lf"><button type="button" class="btn rd" id="cn">Cancel</button><span>Lupa <a id="fp">password?</a></span></div></div><div class="demo2"><a data-d="admin">Isi akun Admin</a><a data-d="staff">Isi akun Staff</a><a href="#demo">Halaman akun demo</a></div></div>`;
     const ch=$('#ch'),f=$('#lf'),pp=ch.querySelectorAll('.pp'),er=$('#e');
     if(localStorage.ru){f.u.value=localStorage.ru;$('#rm').checked=true}
     document.onmousemove=e=>{const c=$('#ch');if(!c)return;const r=c.getBoundingClientRect(),dx=e.clientX-r.left-r.width/2,dy=e.clientY-r.top-r.height*.4,m=Math.hypot(dx,dy)||1,k=Math.min(3,m/50);pp.forEach(p=>p.style.transform=`translate(${dx/m*k}px,${dy/m*k}px)`)};
